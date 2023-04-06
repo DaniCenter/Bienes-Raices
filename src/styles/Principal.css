@@ -1,0 +1,19 @@
+.icon > img {
+  height: 10rem;
+}
+
+.icon > h3 {
+  text-transform: uppercase;
+}
+
+.icon {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .icono-nosotros {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
