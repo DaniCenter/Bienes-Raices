@@ -20,6 +20,24 @@
   display: block;
   text-align: center;
 }
+
+.inicio {
+  background-image: url("../resource/header.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.contenido-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contenido-header > h1 {
+  color: white;
+  font-weight: bold;
+  line-height: 2;
+  max-width: 50rem;
+}
 @media (min-width: 768px) {
   .navegacion {
     display: flex;
@@ -35,5 +53,9 @@
   .barra {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .inicio > .contenido-header,
+  .inicio {
+    min-height: 70rem;
   }
 }
