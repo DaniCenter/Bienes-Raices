@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../resource/logo.svg";
+import "../styles/Header.css";
 
 function Header({ enlaces }) {
   return (
@@ -12,7 +13,11 @@ function Header({ enlaces }) {
 
           <nav className="navegacion">
             {enlaces.map(({ url, titulo }) => {
-              return <a href={url}>{titulo}</a>;
+              return (
+                <a href={url} key={titulo}>
+                  {titulo}
+                </a>
+              );
             })}
           </nav>
         </div>

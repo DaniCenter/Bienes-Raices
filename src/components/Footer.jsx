@@ -4,7 +4,11 @@ function Footer({ enlaces }) {
       <div className="contenedor contenedor-footer">
         <nav className="navegacion">
           {enlaces.map(({ url, titulo }) => {
-            return <a href={url}>{titulo}</a>;
+            return (
+              <a href={url} key={titulo}>
+                {titulo}
+              </a>
+            );
           })}
         </nav>
       </div>
