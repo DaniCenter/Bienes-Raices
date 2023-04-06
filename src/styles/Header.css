@@ -1,0 +1,39 @@
+.header {
+  background-color: #333333;
+  padding: 1rem 0 3rem 0;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.barra img {
+  width: 100%;
+}
+
+.navegacion > a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.2rem;
+  display: block;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .navegacion {
+    display: flex;
+    align-items: center;
+  }
+  .navegacion > a {
+    margin-right: 2rem;
+    font-size: 1.8rem;
+  }
+  .navegacion > a:last-of-type {
+    margin-right: 0;
+  }
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
