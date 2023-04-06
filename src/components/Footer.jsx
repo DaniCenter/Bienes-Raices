@@ -1,3 +1,5 @@
+import "../styles/Footer.css";
+
 function Footer({ enlaces }) {
   return (
     <footer className="footer seccion">
