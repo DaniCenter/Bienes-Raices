@@ -3,6 +3,7 @@ import estacionamiento from "../resource/icono_estacionamiento.svg";
 import wc from "../resource/icono_wc.svg";
 import "../styles/Anuncios.css";
 import "../styles/Boton.css";
+import { Boton } from "./Boton";
 
 function Anuncios({ anuncios, children }) {
   return (
@@ -38,6 +39,9 @@ function Anuncios({ anuncios, children }) {
             </div>
           );
         })}
+      </div>
+      <div className="alinear-derecha">
+        <Boton link={"/"} texto={"Ver todos los anuncios"} botonColor={"verde"} />
       </div>
     </section>
   );
