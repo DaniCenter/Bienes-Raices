@@ -1,10 +1,13 @@
+import { Anuncios } from "../components/Anuncios";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Main } from "../components/Main";
+import img1 from "../resource/anuncio1.jpg";
 import icono1 from "../resource/icono1.svg";
 import icono2 from "../resource/icono2.svg";
 import icono3 from "../resource/icono3.svg";
 import "../styles/App.css";
+
 function App() {
   const nav = [
     { url: "nosotros.html", titulo: "Nosotros" },
@@ -34,10 +37,23 @@ function App() {
     },
   ];
 
+  const anuncios = [
+    {
+      imagen: img1,
+      titulo: "Casa de lujo de lago",
+      texto: "Casa en el lago con exelente vista, acabados de lujo a un exelente precio",
+      precio: 30000000,
+      ndormitorios: 5,
+      nestacionamiento: 3,
+      nbaños: 5,
+    },
+  ];
+
   return (
     <>
       <Header enlaces={nav} clase={"inicio"} titulo={"Venta de casas y departamentos exclusivos de lujo"} />
       <Main titulo={"Mas sobre nosotros"} cartas={cartas} />
+      <Anuncios anuncios={anuncios} />
       <Footer enlaces={nav} />
     </>
   );
