@@ -1,0 +1,22 @@
+.boton {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.boton-amarillo {
+  background-color: #e08809;
+  display: block;
+}
+
+.boton-amarillo:hover {
+  background-color: #d27e08;
+}
+
+.boton-verde {
+  display: inline-block;
+  background-color: green;
+}

@@ -2,8 +2,9 @@ import dormitorios from "../resource/icono_dormitorio.svg";
 import estacionamiento from "../resource/icono_estacionamiento.svg";
 import wc from "../resource/icono_wc.svg";
 import "../styles/Anuncios.css";
+import "../styles/Boton.css";
 
-function Anuncios({ anuncios }) {
+function Anuncios({ anuncios, children }) {
   return (
     <section className="seccion contenedor">
       <h2>Casas y Depas en Venta</h2>
@@ -32,6 +33,7 @@ function Anuncios({ anuncios }) {
                     <p>{ndormitorios}</p>
                   </li>
                 </ul>
+                {children}
               </div>
             </div>
           );
