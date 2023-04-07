@@ -1,5 +1,6 @@
 import { Anuncios } from "../components/Anuncios";
 import { Boton } from "../components/Boton";
+import { Contacto } from "../components/Contacto";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Main } from "../components/Main";
@@ -75,8 +76,9 @@ function App() {
       <Header enlaces={nav} clase={"inicio"} titulo={"Venta de casas y departamentos exclusivos de lujo"} />
       <Main titulo={"Mas sobre nosotros"} cartas={cartas} />
       <Anuncios anuncios={anuncios}>
-        <Boton link={"/"} texto={"Ver anuncio"} botonColor={"amarillo"} />
+        <Boton link={"/"} texto={"Ver anuncio"} botonColor={"amarillo"} block={"block"} />
       </Anuncios>
+      <Contacto />
       <Footer enlaces={nav} />
     </>
   );

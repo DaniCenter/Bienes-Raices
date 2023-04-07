@@ -1,0 +1,20 @@
+.imagen-contacto {
+  background-image: url("../resource/encuentra.jpg");
+  background-size: cover;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.imagen-contacto h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.imagen-contacto p {
+  font-size: 1.8rem;
+  color: white;
+}
