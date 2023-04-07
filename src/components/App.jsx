@@ -4,6 +4,8 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Main } from "../components/Main";
 import img1 from "../resource/anuncio1.jpg";
+import img2 from "../resource/anuncio2.jpg";
+import img3 from "../resource/anuncio3.jpg";
 import icono1 from "../resource/icono1.svg";
 import icono2 from "../resource/icono2.svg";
 import icono3 from "../resource/icono3.svg";
@@ -47,6 +49,24 @@ function App() {
       ndormitorios: 5,
       nestacionamiento: 3,
       nbaños: 5,
+    },
+    {
+      imagen: img2,
+      titulo: "Casa terminados de lujo",
+      texto: "Casa con diseño modernos, asi como tecnologia inteligente y amueblada",
+      precio: 20000000,
+      ndormitorios: 5,
+      nestacionamiento: 2,
+      nbaños: 3,
+    },
+    {
+      imagen: img3,
+      titulo: "Casa con alberca",
+      texto: "Casa con alberca y acabado de lujo en la ciudad, exelente oportunidad",
+      precio: 30000000,
+      ndormitorios: 6,
+      nestacionamiento: 2,
+      nbaños: 4,
     },
   ];
 
