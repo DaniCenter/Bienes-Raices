@@ -4,12 +4,11 @@
   text-decoration: none;
   padding: 1rem 3rem;
   text-align: center;
-  margin-top: 2.5rem;
+  display: inline-block;
 }
 
 .boton-amarillo {
   background-color: #e08809;
-  display: block;
 }
 
 .boton-amarillo:hover {
@@ -17,7 +16,6 @@
 }
 
 .boton-verde {
-  display: inline-block;
   background-color: green;
 }
 
@@ -27,4 +25,8 @@
 .alinear-derecha {
   display: flex;
   justify-content: flex-end;
+}
+
+.boton.block {
+  display: block;
 }
