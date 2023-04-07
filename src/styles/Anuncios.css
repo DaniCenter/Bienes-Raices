@@ -51,3 +51,7 @@
   font-weight: bold;
   margin: auto 0;
 }
+
+.alinear-derecha > a {
+  margin-top: 2.5rem;
+}
