@@ -84,7 +84,7 @@ function App() {
     },
     {
       imagen: blog2,
-      titulo: "Terraza en el techo de tu casa",
+      titulo: "Piscina lujosa",
       fecha: "20/10/2022",
       autor: "Admin",
       texto: "Conejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero",

@@ -1,11 +1,13 @@
+import "../styles/Blog.css";
+
 function Blog({ blogs }) {
   return (
-    <div className="contenedor seccion">
+    <div className="contenedor seccio seccion-inferior">
       <section className="blog">
         <h3>Nuestro Blog</h3>
         {blogs.map(({ imagen, titulo, fecha, autor, texto }) => {
           return (
-            <article className="entrada-blog">
+            <article className="entrada-blog" key={titulo}>
               <div className="imagen">
                 <img src={imagen} alt={titulo} />
               </div>
