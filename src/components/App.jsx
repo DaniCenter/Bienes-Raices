@@ -1,4 +1,5 @@
 import { Anuncios } from "../components/Anuncios";
+import { Blog } from "../components/Blog";
 import { Boton } from "../components/Boton";
 import { Contacto } from "../components/Contacto";
 import { Footer } from "../components/Footer";
@@ -7,6 +8,8 @@ import { Main } from "../components/Main";
 import img1 from "../resource/anuncio1.jpg";
 import img2 from "../resource/anuncio2.jpg";
 import img3 from "../resource/anuncio3.jpg";
+import blog1 from "../resource/blog1.jpg";
+import blog2 from "../resource/blog2.jpg";
 import icono1 from "../resource/icono1.svg";
 import icono2 from "../resource/icono2.svg";
 import icono3 from "../resource/icono3.svg";
@@ -71,6 +74,22 @@ function App() {
     },
   ];
 
+  const blogs = [
+    {
+      imagen: blog1,
+      titulo: "Terraza en el techo de tu casa",
+      fecha: "20/10/2022",
+      autor: "Admin",
+      texto: "Conejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero",
+    },
+    {
+      imagen: blog2,
+      titulo: "Terraza en el techo de tu casa",
+      fecha: "20/10/2022",
+      autor: "Admin",
+      texto: "Conejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero",
+    },
+  ];
   return (
     <>
       <Header enlaces={nav} clase={"inicio"} titulo={"Venta de casas y departamentos exclusivos de lujo"} />
@@ -79,6 +98,7 @@ function App() {
         <Boton link={"/"} texto={"Ver anuncio"} botonColor={"amarillo"} block={"block"} />
       </Anuncios>
       <Contacto />
+      <Blog blogs={blogs} />
       <Footer enlaces={nav} />
     </>
   );
