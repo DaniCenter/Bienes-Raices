@@ -17,10 +17,10 @@ import "../styles/App.css";
 
 function App() {
   const nav = [
-    { url: "nosotros.html", titulo: "Nosotros" },
-    { url: "anuncio.html", titulo: "Anuncio" },
-    { url: "blog.html", titulo: "Blog" },
-    { url: "contacto.html", titulo: "Contacto" },
+    { url: "/src/html/nosotros.html", titulo: "Nosotros" },
+    { url: "/src/html/anuncio.html", titulo: "Anuncio" },
+    { url: "/src/html/blog.html", titulo: "Blog" },
+    { url: "/src/html/contacto.html", titulo: "Contacto" },
   ];
 
   const cartas = [
