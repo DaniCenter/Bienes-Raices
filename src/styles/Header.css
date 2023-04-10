@@ -42,11 +42,13 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s linear, visibility 0.3s ease-in-out;
+  height: 0;
 }
 .mostrar {
   display: block;
   visibility: visible;
   opacity: 1;
+  height: auto;
 }
 .derecha {
   display: flex;

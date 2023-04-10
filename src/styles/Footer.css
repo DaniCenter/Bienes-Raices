@@ -6,6 +6,7 @@
 .footer .navegacion {
   visibility: visible;
   opacity: 1;
+  height: auto;
 }
 .contenedor-footer {
   padding: 2.5rem;
