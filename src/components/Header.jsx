@@ -6,6 +6,10 @@ import "../styles/Header.css";
 
 function Header({ enlaces, clase, titulo }) {
   useEffect(() => {
+    const prefiereDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (prefiereDarkMode) {
+      document.body.classList.add("dark-mode");
+    }
     document.querySelector(".mobile-menu").addEventListener("click", () => {
       document.querySelector(".navegacion").classList.toggle("mostrar");
     });
