@@ -1,0 +1,52 @@
+.titulo {
+  text-align: center;
+}
+
+.formulario p {
+  font-size: 1.4rem;
+  color: gray;
+  margin: 2rem 0 0 0;
+}
+
+.formulario legend {
+  font-size: 2rem;
+  color: gray;
+}
+
+.formulario label {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+}
+
+.formulario textarea {
+  height: 20rem;
+}
+
+.formulario input:not([type="submit"]),
+textarea,
+select {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.forma-contacto {
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forma-contacto input[type="radio"] {
+  margin: 0;
+  width: auto;
+}
+
+fieldset:last-of-type {
+  margin-bottom: 2rem;
+}
