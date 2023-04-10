@@ -36,3 +36,13 @@ img {
 .dark-mode .icono {
   filter: invert(100%);
 }
+.dark-mode .formulario {
+  color: rgb(117, 117, 117);
+}
+.dark-mode .formulario input:not(input[type="submit"]),
+.dark-mode .formulario textarea,
+.dark-mode .formulario select {
+  background-color: rgb(70, 70, 70);
+  color: white;
+  border: none;
+}
