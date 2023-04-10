@@ -22,15 +22,15 @@ function Anuncios({ anuncios, children, mostrar }) {
 
                 <ul className="iconos-caracteristica">
                   <li>
-                    <img src={wc} alt={`icono`} />
+                    <img src={wc} alt={`icono`} className="icono" />
                     <p>{nbaños}</p>
                   </li>
                   <li>
-                    <img src={estacionamiento} alt={`icono`} />
+                    <img src={estacionamiento} alt={`icono`} className="icono" />
                     <p>{nestacionamiento}</p>
                   </li>
                   <li>
-                    <img src={dormitorios} alt={`icono`} />
+                    <img src={dormitorios} alt={`icono`} className="icono" />
                     <p>{ndormitorios}</p>
                   </li>
                 </ul>

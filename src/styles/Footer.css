@@ -3,7 +3,10 @@
   padding: 2.5rem 0;
   margin-top: 2.5rem;
 }
-
+.footer .navegacion {
+  visibility: visible;
+  opacity: 1;
+}
 .contenedor-footer {
   padding: 2.5rem;
 }

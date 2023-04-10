@@ -9,3 +9,30 @@ img {
 .contenido-centrado {
   max-width: 80rem;
 }
+
+.dark-mode {
+  background-color: rgba(7, 7, 7, 0.9);
+}
+
+.dark-mode p {
+  color: white;
+}
+.dark-mode a,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4 {
+  color: rgb(196, 196, 196);
+}
+.dark-mode .anuncio {
+  background-color: rgb(44, 44, 44);
+  border: 1px solid rgb(54, 54, 54);
+}
+
+.dark-mode .anuncio .precio {
+  color: green;
+}
+
+.dark-mode .icono {
+  filter: invert(100%);
+}

@@ -18,7 +18,7 @@ function CardAnuncio({ titulo, img, texto, precio, iconos, descripcion }) {
               {iconos.map(({ imagen, cantidad }) => {
                 return (
                   <li key={cantidad}>
-                    <img src={imagen} />
+                    <img src={imagen} className="icono" />
                     <p>{cantidad}</p>
                   </li>
                 );
