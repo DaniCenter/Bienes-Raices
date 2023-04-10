@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.titulo-card {
+  text-align: center;
+}
+
+.texto-nosotros blockquote {
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin: 0;
+}
