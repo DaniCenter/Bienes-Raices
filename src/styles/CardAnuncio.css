@@ -17,3 +17,11 @@
   font-size: 2rem;
   color: rgb(33, 150, 29);
 }
+
+.informacion-meta span {
+  color: #e08809;
+}
+
+.informacion-meta {
+  font-weight: bold;
+}
