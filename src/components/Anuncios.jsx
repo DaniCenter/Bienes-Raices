@@ -5,7 +5,7 @@ import "../styles/Anuncios.css";
 import "../styles/Boton.css";
 import { Boton } from "./Boton";
 
-function Anuncios({ anuncios, children }) {
+function Anuncios({ anuncios, children, mostrar }) {
   return (
     <section className="seccion contenedor">
       <h2>Casas y Depas en Venta</h2>
@@ -40,7 +40,7 @@ function Anuncios({ anuncios, children }) {
           );
         })}
       </div>
-      <div className="alinear-derecha">
+      <div className={`alinear-derecha ${mostrar ? "" : "no-mostrar"}`}>
         <Boton link={"/"} texto={"Ver todos los anuncios"} botonColor={"verde"} />
       </div>
     </section>

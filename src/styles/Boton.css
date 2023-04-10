@@ -30,3 +30,7 @@
 .boton.block {
   display: block;
 }
+
+.no-mostrar {
+  display: none;
+}
