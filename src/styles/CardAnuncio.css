@@ -1,0 +1,19 @@
+.iconos-caracteristicas img {
+  max-width: 5rem;
+}
+.iconos-caracteristicas {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.resumen-propiedad .precio {
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(33, 150, 29);
+}

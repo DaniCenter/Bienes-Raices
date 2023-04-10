@@ -76,7 +76,7 @@ function AnunciosCont() {
     <>
       <Header enlaces={nav} />
       <Anuncios anuncios={anuncios}>
-        <Boton link={"/"} texto={"Ver anuncio"} botonColor={"amarillo ocultar"} block={"block"} />
+        <Boton link={"/src/html/anuncioUnit.html"} texto={"Ver anuncio"} botonColor={"amarillo ocultar"} block={"block"} />
       </Anuncios>
       <Footer enlaces={nav} />
     </>
