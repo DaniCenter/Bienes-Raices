@@ -4,6 +4,19 @@ import imagemin from "vite-plugin-imagemin";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: "/index.html",
+        anuncio: "/src/html/anuncio.html",
+        anuncioUnit: "/src/html/anuncioUnit.html",
+        blog: "/src/html/blog.html",
+        contacto: "/src/html/contacto.html",
+        nosotros: "/src/html/nosotros.html",
+        formularioPropiedad: "/src/html/formularioPropiedad.html",
+      },
+    },
+  },
   plugins: [
     react(),
     imagemin({
