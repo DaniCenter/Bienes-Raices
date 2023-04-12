@@ -23,8 +23,8 @@ function Formulario({ titulo, img }) {
         <fieldset>
           <legend>Informacion sobre la propiedad</legend>
           <label htmlFor="opciones">Vende o Compra</label>
-          <select name="" id="opciones">
-            <option value="" disabled selected>
+          <select name="" id="opciones" defaultValue="disable">
+            <option value="disable" disabled>
               --Seleccione--
             </option>
             <option value="compra">Compra</option>
