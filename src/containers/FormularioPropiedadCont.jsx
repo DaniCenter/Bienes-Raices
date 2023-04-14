@@ -13,7 +13,7 @@ function FormularioPropiedadCont() {
   return (
     <>
       <Header enlaces={nav} />
-      <FormularioPropiedad />;
+      <FormularioPropiedad />
       <Footer enlaces={nav} />
     </>
   );
