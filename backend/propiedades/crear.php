@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nbaños = $_POST["nBaños"];
   $nestacionamientos = $_POST["nEstacionamientos"];
   $idvendedor = $_POST["idVendedor"];
-
+  $creado = date("Y-m-d");
   if (!$titulo) {
     $errores[] = "Debes añadir un titulo";
   }
@@ -38,13 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   if (empty($errores)) {
-    $query = "INSERT INTO propiedades (titulo , precio, descripccion, habitaciones, wc, estacionamiento, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', '$nhabitaciones', '$nbaños', '$nestacionamientos', '$idvendedor')";
+    $query = "INSERT INTO propiedades (titulo , precio, descripccion, habitaciones, wc, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', '$nhabitaciones', '$nbaños', '$nestacionamientos','$creado' , '$idvendedor')";
   } else {
     header('Content-Type: application/json');
     echo json_encode([
       'error' => true,
       'message' => $errores,
     ]);
+    mysqli_close($db);
     exit;
   }
 
@@ -54,4 +55,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     'error' => false,
     'message' => 'Consulta ejecutada con éxito',
   ]);
+  mysqli_close($db);
 }
