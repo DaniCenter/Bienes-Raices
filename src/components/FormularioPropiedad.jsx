@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Boton.css";
 import "../styles/Formulario.css";
 
 function FormularioPropiedad() {
   const [error, setError] = useState([]);
+  const [vendedores, setVendedores] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/vendedores/listar.php")
+      .then((response) => response.json())
+      .then((responseData) => {
+        setVendedores([...responseData.message]);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
   function handelSubmit(event) {
     event.preventDefault();
@@ -59,9 +69,16 @@ function FormularioPropiedad() {
           <fieldset>
             <legend>Vendedor</legend>
             <select name="idVendedor" id="">
-              <option value="">--Seleccione--</option>
-              <option value="1">Juan</option>
-              <option value="2">Karen</option>
+              <option value="" defaultValue>
+                --Seleccione--
+              </option>
+              {vendedores.map(({ id, nombre, apellido }) => {
+                return (
+                  <option key={id} value={id}>
+                    {`${nombre} ${apellido}`}
+                  </option>
+                );
+              })}
             </select>
           </fieldset>
           <input type="submit" className="boton-verde boton" value="Crear propiedad" />
