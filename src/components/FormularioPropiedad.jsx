@@ -13,6 +13,10 @@ function FormularioPropiedad() {
       .then((responseData) => {
         if (responseData.error) {
           setError([...responseData.message]);
+        } else {
+          setError([]);
+          alert("Propiedad creada con exito");
+          event.target.reset();
         }
       })
       .catch((error) => console.log(error));
