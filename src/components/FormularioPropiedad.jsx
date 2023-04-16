@@ -23,7 +23,11 @@ function FormularioPropiedad() {
       <main className="contenedor seccion">
         <div className="error">
           {error.map((error) => {
-            return <p key={error}>{error}</p>;
+            return (
+              <p key={error} className="alerta">
+                {error}
+              </p>
+            );
           })}
         </div>
         <h1>Crear</h1>
