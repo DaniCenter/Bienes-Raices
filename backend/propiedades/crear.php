@@ -5,14 +5,14 @@ $errores = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $db = conectarDB();
 
-  $titulo = $_POST["tituloPropiedad"];
-  $precio = $_POST["precioPropiedad"];
-  $descripcion = $_POST["descripcion"];
-  $img = $_POST["imgPropiedad"];
-  $nhabitaciones = $_POST["nHabitaciones"];
-  $nbaños = $_POST["nBaños"];
-  $nestacionamientos = $_POST["nEstacionamientos"];
-  $idvendedor = $_POST["idVendedor"];
+  $titulo = mysqli_real_escape_string($db, $_POST["tituloPropiedad"]);
+  $precio = mysqli_real_escape_string($db, $_POST["precioPropiedad"]);
+  $descripcion = mysqli_real_escape_string($db, $_POST["descripcion"]);
+  $img = mysqli_real_escape_string($db, $_POST["imgPropiedad"]);
+  $nhabitaciones = mysqli_real_escape_string($db, $_POST["nHabitaciones"]);
+  $nbaños = mysqli_real_escape_string($db, $_POST["nBaños"]);
+  $nestacionamientos = mysqli_real_escape_string($db, $_POST["nEstacionamientos"]);
+  $idvendedor = mysqli_real_escape_string($db, $_POST["idVendedor"]);
   $creado = date("Y-m-d");
   if (!$titulo) {
     $errores[] = "Debes añadir un titulo";
