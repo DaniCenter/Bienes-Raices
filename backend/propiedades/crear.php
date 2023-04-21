@@ -4,6 +4,7 @@ $errores = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $db = conectarDB();
+  $medida = 1000 * 100; // max 100kb por imagen
 
   $titulo = mysqli_real_escape_string($db, $_POST["tituloPropiedad"]);
   $precio = mysqli_real_escape_string($db, $_POST["precioPropiedad"]);
@@ -14,6 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nestacionamientos = mysqli_real_escape_string($db, $_POST["nEstacionamientos"]);
   $idvendedor = mysqli_real_escape_string($db, $_POST["idVendedor"]);
   $creado = date("Y-m-d");
+  $imagen = $_FILES['imgPropiedad'];
+
+  if (!$imagen["name"] || $imagen["error"]) {
+    $errores[] = "Debes añadir una imagen";
+  } else if ($imagen["size" ]> $medida) {
+    $errores[] = "La imagen es muy grande";
+  }
   if (!$titulo) {
     $errores[] = "Debes añadir un titulo";
   }

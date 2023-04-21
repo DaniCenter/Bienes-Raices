@@ -45,7 +45,7 @@ function FormularioPropiedad() {
           })}
         </div>
         <h1>Crear</h1>
-        <form className="formulario" onSubmit={handelSubmit}>
+        <form className="formulario" onSubmit={handelSubmit} encType="multipart/form-data">
           <fieldset>
             <legend>Informacion General</legend>
             <label htmlFor="tituloPropieda">Titulo</label>
