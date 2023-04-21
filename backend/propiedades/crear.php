@@ -4,7 +4,7 @@ $errores = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $db = conectarDB();
-  $medida = 1000 * 100; // max 100kb por imagen
+  $medida = 1000 * 1000; // max 1mb por imagen
 
   $titulo = mysqli_real_escape_string($db, $_POST["tituloPropiedad"]);
   $precio = mysqli_real_escape_string($db, $_POST["precioPropiedad"]);
@@ -46,7 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   if (empty($errores)) {
-    $query = "INSERT INTO propiedades (titulo , precio, descripccion, habitaciones, wc, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', '$nhabitaciones', '$nbaños', '$nestacionamientos','$creado' , '$idvendedor')";
+    $carpetaImagenes =  "../imagenes";
+    if (!is_dir($carpetaImagenes)) {
+      mkdir($carpetaImagenes);
+    }
+    $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+
+    move_uploaded_file($imagen["tmp_name"], "$carpetaImagenes/$nombreImagen");
+
+
+    $query = "INSERT INTO propiedades (titulo , precio, imagen, descripccion, habitaciones, wc, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$nombreImagen','$descripcion', '$nhabitaciones', '$nbaños', '$nestacionamientos','$creado' , '$idvendedor')";
   } else {
     header('Content-Type: application/json');
     echo json_encode([
